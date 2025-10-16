@@ -11,20 +11,22 @@ public class FibonacciSeries {
         if (n >= 1) {
             int first = 0;
             int second = 1;
-            System.out.print(first + " " + second + " ");
+            StringBuilder series = new StringBuilder();
+            series.append(first).append(" ").append(second).append(" ");
 
             for (int i = 3; i <= n; i++) {
                 int next = first + second;
-                System.out.print(next + " ");
-
+                series.append(next).append(" ");
                 first = second;
                 second = next;
             }
+
+            System.out.print(series);
         } else if (n == 1) {
             System.out.print("0");
         }
 
-        System.out.println(); 
+        System.out.println();
         scanner.close();
     }
 }
